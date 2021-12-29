@@ -1,0 +1,48 @@
+<ul class="navbar">
+    <li>
+        <a
+            href="/"
+            title="Home"
+            class="navbar__link{% if current_path == "/" %}-active{% endif %}"
+        >
+            Home
+        </a>
+    </li>
+    <li>
+        <a
+            href="/projects"
+            title="Projects"
+            class="navbar__link{% if current_path == "/projects" %}-active{% endif %}"
+        >
+            Projects
+        </a>
+    </li>
+    <li>
+        <a
+            href="/blog"
+            title="Blog"
+            class="navbar__link{% if current_path == "/blog" %}-active{% endif %}"
+        >
+            Blog
+        </a>
+    </li>
+    <li>
+        <a
+            href="/contact"
+            title="Contact"
+            class="navbar__link{% if current_path == "/contact" %}-active{% endif %}"
+        >
+            Contact
+        </a>
+    </li>
+    <ul class="navbar__themes">
+        <li>
+            <button
+                class="navbar__theme"
+                title="Switch theme"
+                onclick="switchTheme()"
+            >
+            </button>
+        </li>
+    </ul>
+</ul>

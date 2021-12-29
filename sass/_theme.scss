@@ -1,0 +1,87 @@
+$themes: ();
+$themeValues: ();
+
+$colors: (
+    glacier: #75B8BF,
+    desert: #F2F2F0,
+    merino: #F2EBDC,
+    masala: #403836,
+    valencia: #D94141,
+);
+
+@function color($colorName) {
+    @return map-get($colors, $colorName);
+}
+
+@function themeExists($key, $theme) {
+    @if map-has-key($themeValues, $key) {
+        @return map-has-key(map-get($themeValues, $key), $theme);
+    }
+    @return null;
+}
+
+@function getThemeValue($key, $theme) {
+    @return map-get(map-get($themeValues, $key), $theme);
+}
+
+$light: (
+    background: color(desert),
+    text: color(masala),
+    heading: color(masala),
+    blue: color(glacier),
+    lines: color(masala),
+    red: color(valencia),
+);
+
+$dark: (
+    background: color(masala),
+    text: color(merino),
+    heading: color(merino),
+    blue: color(glacier),
+    lines: color(merino),
+    red: color(valencia),
+);
+
+@mixin theme($property, $key, $inlineExtra: null, $postExtra: null) {
+    @each $theme in $themes {
+        @if (themeExists($key, $theme)) {
+            $value: getThemeValue($key, $theme);
+            @at-root .#{$theme} #{&} { 
+                #{$property}: #{$inlineExtra} #{$value} #{$postExtra};
+                #{$property}: #{$inlineExtra} var(--theme-#{$theme}-#{$key}, #{$value}) #{$postExtra};
+            }
+        } @else {
+            @error "Property #{$key} doesn´t exist in #{$theme}";
+        }
+    }
+}
+
+@mixin generateThemeMappings($themeName, $newThemeMap) {
+  $themes: append($themes, $themeName, $separator: comma) !global;
+  @each $key, $value in $newThemeMap {
+    @if not map-has-key($themeValues, $key) {
+      $themeValues: map-merge($themeValues, ($key: ( $themeName: $value ))) !global;
+    }
+    @else {
+      $existingKeyMap: map-get($themeValues, $key);
+      @if not map-get($existingKeyMap, $themeName) {
+        $newKeyMap: map-merge($existingKeyMap, ( $themeName: $value ));
+        $themeValues: map-merge($themeValues, ( $key: $newKeyMap )) !global;
+      }
+    }
+  }
+}
+
+@mixin generateThemeVariables {
+    @each $key, $val in $themeValues {
+      @each $theme in $themes {
+        @if (themeExists($key, $theme)) {
+          --theme-#{$theme}-#{$key}: #{getThemeValue($key, $theme)};
+        }
+      }
+    }
+  }
+
+@include generateThemeMappings(light, $light);
+@include generateThemeMappings(dark, $dark);
+

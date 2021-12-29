@@ -1,0 +1,24 @@
+@import './_theme.scss';
+* {
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+    @include theme(background-color, background);
+    background-image: url('images/dots.png');
+}
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 1rem 1rem 0 ;
+    @include theme(border, text, solid 3px);
+}
+main {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    @include theme(border, text, solid 3px);
+    @include theme(border-bottom, text, solid 5px);
+    margin-top: -3px;
+}

@@ -1,0 +1,72 @@
+.fold {
+    display: flex;
+    min-height: 70vh;
+    flex-direction: row;
+    align-content: initial;
+    justify-content: initial;
+    @include theme(border-bottom, text, solid 5px);
+    &__drawing {
+        flex: 1;
+        display: flex;
+        position: relative;
+        padding: 0.3rem;
+        @include theme(border-right, text, solid 3px);
+    }
+    &__painting {
+        width: 100%;
+        display: block; 
+        @include theme(border, text, solid 3px);
+    }
+    &__me{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+    }
+    &__namerow{
+        flex: 1;
+        display:flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        @include theme(border-bottom, text, solid 3px);
+        @include theme(background, text);
+        @include theme(color, background);
+    }
+    &__name {
+        width: 100%;
+        display: block;
+        margin: 0;
+        text-align: center;
+        line-height: 1;
+        text-transform: uppercase;
+        font-family: $oswald;
+    }
+    &__front{
+        flex: 1;
+        display:flex;
+        text-align: center;
+        @include theme(color, blue);
+        @include theme(border-bottom, text, solid 3px);
+        h2 {
+            width: 100%;
+            margin: 0;
+            display: block;
+            line-height: 1;
+            font-family: $oswald;
+            text-transform: uppercase;
+        }
+    }
+    &__description{
+        flex: 1;
+        display:flex;
+        padding: 0 2rem;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            font-family: $lato;
+            text-align: justify;
+            @include theme(color, text);
+        }
+    }
+}

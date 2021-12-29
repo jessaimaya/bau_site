@@ -1,0 +1,78 @@
+header {
+    z-index: 5;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -3px;
+    position: relative;
+    @include theme(border, text, solid 3px);
+    @include theme(border-bottom, text, solid 5px);
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+
+    li {
+        flex: 2;
+        display: flex;
+        justify-content: center
+    }
+
+    &__link {
+        @include theme(color, text);
+        font-family: $bitter;
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-decoration: none;
+        &-active {
+            font-family: $bitter;
+            font-weight: 900;
+            font-size: 1.3rem;
+            text-decoration: none;
+            @include theme(color, red);
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__themes {
+        flex: 1;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-content: center;
+        & li {
+            display: flex;
+            flex: 1;
+        }
+    }
+    &__theme {
+        padding: 0;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        cursor: pointer;
+        border-radius: 5rem;
+        border: solid 3px black;
+        @include theme(background-color, background);
+        @include theme(border-color, text);
+        &:before {
+            content: ' ';
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 2rem;
+            display: flex;
+            align-self: center;
+            margin: 0 auto;
+            @include theme(background-color, text);
+        }
+    }
+}
