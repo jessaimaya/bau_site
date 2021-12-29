@@ -1,0 +1,55 @@
+.interests{
+    display: flex;
+    flex-direction: column;
+    @include theme(border-bottom, text, solid 5px);
+    &__heading{
+        flex: 1;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 3rem;
+        @include theme(background-color, text);
+        @include theme(color, background);
+        h2 {
+            margin: 0;
+            line-height: 1;
+            padding-bottom: 1rem;
+        }
+    }
+    &__education{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+    &__block {
+        flex: 1;
+        display: flex;
+        @include theme(border-right, text, solid 3px);
+    }
+    &__education {
+        display: flex;
+    }
+    &__edusection {
+        flex: 1;
+        display: flex;;
+    }
+    &__list{
+        list-style: none;
+        li:nth-child(odd):before {
+            content: "\2022";
+            margin-right: 0.5rem;
+            @include theme(color, bullet);
+
+        }
+        li:nth-child(even):before {
+            content: "\2022";
+            margin-right: 0.5rem;
+            @include theme(color, blue);
+        }
+    }
+    .interest {
+        font-size: 1.5rem;
+        font-family: $lato;
+        @include theme(color, text);
+    }
+}

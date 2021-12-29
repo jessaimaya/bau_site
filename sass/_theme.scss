@@ -31,6 +31,7 @@ $light: (
     blue: color(glacier),
     lines: color(masala),
     red: color(valencia),
+    bullet: color(valencia),
 );
 
 $dark: (
@@ -40,6 +41,7 @@ $dark: (
     blue: color(glacier),
     lines: color(merino),
     red: color(valencia),
+    bullet: color(merino),
 );
 
 @mixin theme($property, $key, $inlineExtra: null, $postExtra: null) {

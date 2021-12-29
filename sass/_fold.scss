@@ -1,6 +1,6 @@
 .fold {
     display: flex;
-    min-height: 70vh;
+    min-height: 50vh;
     flex-direction: row;
     align-content: initial;
     justify-content: initial;
@@ -15,7 +15,7 @@
     &__painting {
         width: 100%;
         display: block; 
-        @include theme(border, text, solid 3px);
+        //@include theme(border, text, solid 3px);
     }
     &__me{
         flex: 2;
@@ -23,7 +23,6 @@
         flex-direction: column;
     }
     &__namerow{
-        flex: 1;
         display:flex;
         margin: 0;
         padding: 0;
@@ -37,7 +36,6 @@
         display: block;
         margin: 0;
         text-align: center;
-        line-height: 1;
         text-transform: uppercase;
         font-family: $oswald;
     }
@@ -51,7 +49,6 @@
             width: 100%;
             margin: 0;
             display: block;
-            line-height: 1;
             font-family: $oswald;
             text-transform: uppercase;
         }

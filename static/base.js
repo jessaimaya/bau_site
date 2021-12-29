@@ -8,6 +8,7 @@ const clicking = () => console.log("click");
     document.addEventListener("DOMContentLoaded", function() {
         window.fitText( document.getElementsByClassName("fit"), 0.6 );
         window.fitText( document.getElementsByClassName("minfit"), 0.7 );
+        window.fitText( document.getElementsByClassName("minim"), 1.4 );
         console.log("ready");
     });
 })();

@@ -11,7 +11,7 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1280px;
-    padding: 1rem 1rem 0 ;
+    padding: 0 1rem;
     @include theme(border, text, solid 3px);
 }
 main {
