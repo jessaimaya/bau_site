@@ -22,3 +22,6 @@ main {
     @include theme(border-bottom, text, solid 5px);
     margin-top: -3px;
 }
+ ul {
+     list-style: none;
+ }

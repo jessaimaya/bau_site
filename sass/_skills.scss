@@ -1,0 +1,62 @@
+.skills {
+    display: flex;
+    flex-direction: row;
+    @include theme(border-bottom, text, solid 5px);
+    &__details {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        @include theme(border-right, text, solid 3px);
+    }
+    &__title {
+        @include theme(background-color, text);
+        h2 {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            @include theme(color, background);
+        }
+    }
+    &__react {
+        flex: 1;
+        display: flex;
+        padding: 1rem;
+        text-align: center;
+        align-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+            flex: 2;
+            width: 100%;
+            display: flex;
+        }
+        h3 {
+            flex: 1;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            @include theme(color, blue);
+        }
+    }
+    &__list {
+        width: 100%;
+        margin :0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        li {
+            display: flex;
+            padding: 1rem;
+            text-align: center;
+            justify-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+    &__logo-theme {
+        @include theme(filter, text);
+    }
+}

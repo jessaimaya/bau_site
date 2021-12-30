@@ -52,4 +52,28 @@
         font-family: $lato;
         @include theme(color, text);
     }
+    .education__list {
+        width: 100%;
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        align-content: initial;
+        justify-content: space-around;
+        li {
+            display: flex;
+            flex-direction: column;
+            @include theme(color, text);
+        }
+        .education__name {
+            margin: 0;
+            font-family: $lato;
+            font-weight: bold;
+            
+        }
+        .education__institute {
+            margin: 0;
+            font-family: $lato;
+            font-weight: normal;
+        }
+    }
 }

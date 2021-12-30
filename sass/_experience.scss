@@ -1,0 +1,116 @@
+.experience {
+    display: flex;
+    flex-direction: row;
+    @include theme(border-bottom, text, solid 5px);
+    &__title {
+        flex: 1;
+        display:flex;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+        @include theme(color, background);
+        @include theme(background-color, text);
+        h2 {
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+    }
+    &__jobs{
+        flex: 3;
+        display: flex;
+        align-items: initial;
+        justify-content: initial;
+        flex-direction: column;
+    }
+    &__list {
+        width:100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    &__job {
+        @include theme(border-bottom, text, solid 3px);
+
+    }
+    .job__title {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        @include theme(background-color, text);
+        h3 {
+            margin: 0;
+            padding: 0;
+            @include theme(color, background);
+        }
+    }
+    .job__details{
+        display: flex;
+        flex-direction: row;;
+        align-items: center;
+        justify-content: center;
+        h4 {
+            padding: 0;
+            margin: 0;
+        }
+        @include theme(border-bottom, text, solid 3px);
+    }
+    .job__place {
+        flex: 1;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        @include theme(color, text);
+        @include theme(border-right, text, solid 3px);
+    }
+    .job__date {
+        flex: 1;
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        @include theme(color, blue);
+    }
+    .job__description {
+        @include theme(border-bottom, text, solid 3px);
+        padding: 2rem;
+        p {
+            font-family: $lato;
+            text-align: justify;
+            @include theme(color, text);
+        }
+    }
+    .job__activities__list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem;
+        li:before {
+            content: "\2022";
+            margin-right: 0.5rem;
+            @include theme(color, bullet);
+        }
+        li:nth-child(2n + 1):before {
+            content: "\2022";
+            margin-right: 0.5rem;
+            @include theme(color, bullet);
+        }
+        li:nth-child(4n -  1):before,
+        li:nth-child(4n):before{
+            content: "\2022";
+            margin-right: 0.5rem;
+            @include theme(color, blue);
+        }
+    }
+    .job__activity {
+        display: flex;
+        flex: 1 0 50%;
+        font-family: $lato;
+        @include theme(color, text);
+    }
+}
