@@ -1,36 +1,33 @@
-<ul class="navbar">
-    <li>
+<ul class="navbar" id="navbar">
+    <li
+        class="navbar__link{% if current_path == "/" %}-active{% endif %}"
+    >
         <a
             href="/"
             title="Home"
-            class="navbar__link{% if current_path == "/" %}-active{% endif %}"
+            class="navbar__link"
         >
             Home
         </a>
     </li>
-    <li>
+    <li
+        class="navbar__link{% if current_path == "/projects/" %}-active{% endif %}"
+    >
         <a
             href="/projects"
             title="Projects"
-            class="navbar__link{% if current_path == "/projects" %}-active{% endif %}"
+            class="navbar__link"
         >
             Projects
         </a>
     </li>
-    <li>
-        <a
-            href="/blog"
-            title="Blog"
-            class="navbar__link{% if current_path == "/blog" %}-active{% endif %}"
-        >
-            Blog
-        </a>
-    </li>
-    <li>
+    <li
+        class="navbar__link{% if current_path == "/contact/" %}-active{% endif %}"
+    >
         <a
             href="/contact"
             title="Contact"
-            class="navbar__link{% if current_path == "/contact" %}-active{% endif %}"
+            class="navbar__link"
         >
             Contact
         </a>
@@ -45,4 +42,8 @@
             </button>
         </li>
     </ul>
+    <button class="navbar__menuicon" onclick="toggleNavbar()">
+        <img src="images/navbar_light.svg" alt="navbar icon" class="themed light" />
+        <img src="images/navbar_black.svg" alt="navbar icon" class="themed dark" />
+    </button>
 </ul>

@@ -7,7 +7,12 @@ $colors: (
     merino: #F2EBDC,
     masala: #403836,
     valencia: #D94141,
+    transparent: rgba(0,0,0,0),
 );
+
+$sm: 320px;
+$md: 720px;
+$lg: 1024px;
 
 @function color($colorName) {
     @return map-get($colors, $colorName);
@@ -32,6 +37,7 @@ $light: (
     lines: color(masala),
     red: color(valencia),
     bullet: color(valencia),
+    transparent: color(transparent),
 );
 
 $dark: (
@@ -42,6 +48,7 @@ $dark: (
     lines: color(merino),
     red: color(valencia),
     bullet: color(merino),
+    transparent: color(transparent),
 );
 
 @mixin theme($property, $key, $inlineExtra: null, $postExtra: null) {

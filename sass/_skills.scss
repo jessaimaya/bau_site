@@ -2,11 +2,18 @@
     display: flex;
     flex-direction: row;
     @include theme(border-bottom, text, solid 5px);
+    @media screen and (max-width: $md) {
+        flex-direction: column;
+    }
     &__details {
         flex: 3;
         display: flex;
         flex-direction: column;
         @include theme(border-right, text, solid 3px);
+        @media screen and (max-width: $md) {
+            flex: unset;
+            @include theme(border-right, transparent, solid 0);
+        }
     }
     &__title {
         @include theme(background-color, text);
@@ -26,6 +33,9 @@
         align-content: center;
         flex-direction: column;
         justify-content: space-between;
+        @media screen and (max-width: $md) {
+            flex: unset;
+        }
         img {
             flex: 2;
             width: 100%;
@@ -39,6 +49,9 @@
             align-self: center;
             justify-content: center;
             @include theme(color, blue);
+            @media screen and (max-width: $md) {
+                font-size: 3rem;
+            }
         }
     }
     &__list {
@@ -47,6 +60,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        @media screen and (max-width: $md) {
+            padding: 0;
+            flex-wrap: wrap;
+        }
         li {
             display: flex;
             padding: 1rem;
@@ -54,6 +71,15 @@
             justify-items: center;
             justify-content: center;
             align-content: center;
+            @media screen and (max-width: $md) {
+                flex: 1 0 50%;
+                padding: 0.5rem;
+            }
+        }
+        img {
+            @media screen and (max-width: $lg) and (min-width: $md) {
+                width: 50px;
+            }
         }
     }
     &__logo-theme {

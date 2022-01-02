@@ -17,11 +17,50 @@ header {
     align-items: center;
     align-content: center;
     list-style: none;
-
+    @media screen and (max-width: $md) {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+    &.open li {
+        display: none;
+        @media screen and (min-width: $md) {
+            display: flex;
+        }
+    }
+    &.open li.navbar__link-active {
+        display: flex;
+    }
+    &.open .navbar__themes {
+        display: none;
+        @media screen and (min-width: $md) {
+            display: flex;
+        }
+    }
     li {
         flex: 2;
         display: flex;
-        justify-content: center
+        justify-content: center;
+        @media screen and (max-width: $md) {
+            width: 100%;
+            padding: 1rem 0;
+            @include theme(border-bottom, text, solid 3px);
+        }
+        &.navbar__link-active {
+            @media screen and (max-width: $md) {
+                display: flex;
+            }
+        }
+        &.navbar__link-active a {
+            font-family: $bitter;
+            font-weight: 900;
+            font-size: 1.3rem;
+            text-decoration: none;
+            @include theme(color, red);
+            @media screen and (max-width: $md) {
+                display: block;
+            }
+        }
     }
 
     &__link {
@@ -30,12 +69,8 @@ header {
         font-weight: 500;
         font-size: 1.2rem;
         text-decoration: none;
-        &-active {
-            font-family: $bitter;
-            font-weight: 900;
-            font-size: 1.3rem;
-            text-decoration: none;
-            @include theme(color, red);
+        @media screen and (max-width: $md) {
+            // display: none;
         }
         &:hover {
             text-decoration: underline;
@@ -50,9 +85,13 @@ header {
         justify-content: center;
         align-content: center;
         align-content: center;
+        @media screen and (max-width: $md) {
+            padding: 0;
+        }
         & li {
             display: flex;
             flex: 1;
+            @include theme(border-bottom, transparent, solid 0);
         }
     }
     &__theme {
@@ -74,6 +113,20 @@ header {
             align-self: center;
             margin: 0 auto;
             @include theme(background-color, text);
+        }
+    }
+    &__menuicon {
+        top: 0.8rem;
+        position: absolute;
+        right: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        img {
+            width: 2rem;
+        }
+        @media screen and (min-width: $md) {
+            display: none;
         }
     }
 }

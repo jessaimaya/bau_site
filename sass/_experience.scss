@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     @include theme(border-bottom, text, solid 5px);
+    @media screen and (max-width: $md) {
+        flex-direction: column;
+    }
     &__title {
         flex: 1;
         display:flex;
@@ -14,6 +17,11 @@
             text-transform: uppercase;
             writing-mode: vertical-rl;
             text-orientation: upright;
+            @media screen and (max-width: $md) {
+                writing-mode: horizontal-tb;
+                text-orientation: initial;
+                font-size: 3rem;
+            }
         }
     }
     &__jobs{
@@ -48,6 +56,9 @@
             margin: 0;
             padding: 0;
             @include theme(color, background);
+            @media screen and (max-width: $md) {
+                font-size: 2rem;
+            }
         }
     }
     .job__details{
@@ -68,6 +79,10 @@
         justify-content: center;
         @include theme(color, text);
         @include theme(border-right, text, solid 3px);
+
+        @media screen and (max-width: $md) {
+            font-size: 1.5rem;
+        }
     }
     .job__date {
         flex: 1;
@@ -75,6 +90,9 @@
         text-align: center;
         justify-content: center;
         @include theme(color, blue);
+        @media screen and (max-width: $md) {
+            font-size: 1.5rem;
+        }
     }
     .job__description {
         @include theme(border-bottom, text, solid 3px);

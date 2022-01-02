@@ -7,20 +7,21 @@ const switchTheme = () => {
 const toggleThemedElements = () => {
     let theme = document.documentElement.className == 'light' ? 'dark' : 'light';
     let themedElements = document.getElementsByClassName('themed');
-    console.log(theme);
+
     Array.from(themedElements).forEach(elem => { 
-        console.log(elem.style.display);
         if (elem.classList.contains(theme)) {
             elem.style.display = "block";
         } else {
             elem.style.display = "none";
         }
-
-        console.log(elem.style.display);
     });
+    toggleNavbar();
 };
 
-const clicking = () => console.log("click");
+const toggleNavbar = () => {
+    let navbar = document.getElementById("navbar");
+    navbar.classList.toggle("open");
+};
 
 (function(){
     document.addEventListener("DOMContentLoaded", function() {
@@ -32,6 +33,5 @@ const clicking = () => console.log("click");
         window.fitText( document.getElementsByClassName("minim"), 1.4 );
         window.fitText( document.getElementById("skills"), 1.3 );
         window.fitText( document.getElementById("experience"), 0.5 );
-        console.log("ready");
     });
 })();

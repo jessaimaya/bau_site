@@ -11,6 +11,9 @@
         position: relative;
         padding: 0.3rem;
         @include theme(border-right, text, solid 3px);
+        @media screen and (max-width: $md) {
+            display: none;
+        }
     }
     &__painting {
         width: 100%;

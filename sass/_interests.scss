@@ -20,18 +20,26 @@
         display: flex;
         width: 100%;
         flex-direction: row;
+        @media screen and (max-width: $md) {
+            flex-direction: column;
+        }
     }
     &__block {
         flex: 1;
         display: flex;
         @include theme(border-right, text, solid 3px);
+        @media screen and (max-width: $md) {
+            justify-content: center;
+            @include theme(border-bottom, text, solid 3px);
+            @include theme(border-right, transparent, solid 0);
+        }
     }
     &__education {
         display: flex;
     }
     &__edusection {
         flex: 1;
-        display: flex;;
+        display: flex;
     }
     &__list{
         list-style: none;
@@ -46,6 +54,9 @@
             margin-right: 0.5rem;
             @include theme(color, blue);
         }
+        @media screen and (max-width: $md) {
+            padding: 0.5rem 0;
+        }
     }
     .interest {
         font-size: 1.5rem;
@@ -59,10 +70,17 @@
         flex-direction: column;
         align-content: initial;
         justify-content: space-around;
+        @media screen and (max-width: $md) {
+            padding: 0.5rem;
+            justify-content: center;
+        }
         li {
             display: flex;
             flex-direction: column;
             @include theme(color, text);
+            @media screen and (max-width: $md) {
+                margin: 0.5rem 0;
+            }
         }
         .education__name {
             margin: 0;
