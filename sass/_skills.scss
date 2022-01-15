@@ -47,7 +47,9 @@
             width: 100%;
             display: flex;
             align-self: center;
-            justify-content: center;
+            font-size: 3rem;
+            justify-content: end;
+            flex-direction: column;
             @include theme(color, blue);
             @media screen and (max-width: $md) {
                 font-size: 3rem;
