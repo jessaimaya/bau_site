@@ -14,6 +14,8 @@
         @media screen and (max-width: $md) {
             display: none;
         }
+        background-size: cover;
+        background: url("./images/cubism.png") no-repeat;
     }
     &__painting {
         width: 100%;
@@ -68,5 +70,26 @@
             text-align: justify;
             @include theme(color, text);
         }
+    }
+    &__social {
+        flex: 1;
+        display: flex;
+        @include theme(border-top, text, solid 3px);
+    }
+    &__list{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &__link {
+        display: block;
+        padding: 1rem 0;
+    }
+    &__link  img{
+        display: block;
+        max-height: 30px;
     }
 }

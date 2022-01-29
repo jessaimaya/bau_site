@@ -1,11 +1,10 @@
 const switchTheme = () => {
-    let theme = document.documentElement.className == 'light' ? 'dark' : 'light';
-    document.documentElement.className = theme;
+    document.documentElement.className = document.documentElement.className === 'light' ? 'dark' : 'light';
     toggleThemedElements(); 
 };
 
 const toggleThemedElements = () => {
-    let theme = document.documentElement.className == 'light' ? 'dark' : 'light';
+    let theme = document.documentElement.className === 'light' ? 'dark' : 'light';
     let themedElements = document.getElementsByClassName('themed');
 
     Array.from(themedElements).forEach(elem => { 
@@ -33,11 +32,13 @@ const toggleNavbar = () => {
         window.fitText( document.getElementsByClassName("minim"), 1.4 );
         window.fitText( document.getElementById("skills"), 1.3 );
         window.fitText( document.getElementById("experience"), 0.5 );
+        /*
         AOS.init({
             duration: 800,
             delay: 300,
             offset:100,
             mirror: true
         });
+        */
     });
 })();

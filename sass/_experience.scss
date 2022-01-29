@@ -131,4 +131,25 @@
         font-family: $lato;
         @include theme(color, text);
     }
+    .job__study {
+        width: 100%;
+        display: flex;
+        padding: 0.5rem 0;
+    }
+    .case__list {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        align-content: initial;
+        justify-content: space-around;
+    }
+    .case__item{
+        flex: 1;
+        display: flex;
+        text-align: center;
+    }
+    .case__link {
+        width: 100%;
+        @include theme(color, red);
+    }
 }
