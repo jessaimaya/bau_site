@@ -3,8 +3,14 @@
 {% block content %}
 
 {% include "fold.html" %}
+{% include "mantra.html" %}
 {% include "interests_education.html" %}
 {% include "skills.html" %}
 {% include "experience.html" %}
 
+{% endblock %}
+
+{% block external_scripts %}
+<script src="./fittext.js"></script>
+<script src="./base.js"></script>
 {% endblock %}

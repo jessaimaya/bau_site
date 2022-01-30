@@ -1,0 +1,27 @@
+.quote{
+  padding: 1.5rem 1rem;
+  figure, blockquote {
+    @media screen and (max-width: $md) {
+      margin: auto 0;
+    }
+  }
+  figcaption {
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    font-style: italic;
+    opacity: 0.5;
+  }
+  &__mantra{
+    margin: 0;
+    text-align: center;
+    @media screen and (max-width: $md) {
+      font-size: 1.5rem;
+    }
+    @media screen and (min-width: $md) {
+      font-size: 2rem;
+    }
+    @media screen and (min-width: $lg) {
+      font-size: inherit;
+    }
+  }
+}

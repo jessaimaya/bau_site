@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A Basic HTML5 Template</title>
+  <title>Jessai Maya | Portfolio </title>
   <meta name="description" content="Jessai Maya | Web Developer personal website">
   <meta name="author" content="Jessai Maya">
 
@@ -15,12 +15,11 @@
   <meta property="og:description" content="Jessai Maya personal website and portfolio.">
   <meta property="og:image" content="images/me_news.jpg">
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="{{ get_url(path="/images/favicon.ico") }}">
+  <link rel="apple-touch-icon" href="{{ get_url(path="/images/apple-icon.png") }}">
 
-  <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css" type="text/css">
+  <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
   <!--
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   -->
@@ -51,7 +50,6 @@
         <footer>{% include "footer.html" %}</footer>
     </div>
 
-    <script src="fittext.js"></script>
-    <script src="base.js"></script>
+    {% block external_scripts %} {% endblock %}
 </body>
 </html>
