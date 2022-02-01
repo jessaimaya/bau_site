@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% block head_scripts %}
+<link rel="preload" href="/index-6f5ab099c23608fe_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/index-6f5ab099c23608fe.js">
+{% endblock %}
 
 {% block content %}
 
@@ -12,5 +16,6 @@
 
 {% block external_scripts %}
 <script src="./fittext.js"></script>
-<script src="./base.js"></script>
+<script  type="module" src="./poster.js"></script>
+<script  src="./base.js"></script>
 {% endblock %}

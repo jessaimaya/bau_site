@@ -5,17 +5,24 @@
     align-content: initial;
     justify-content: initial;
     @include theme(border-bottom, text, solid 5px);
+    canvas {
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     &__drawing {
         flex: 1;
         display: flex;
         position: relative;
         padding: 0.3rem;
+        overflow: hidden;
         @include theme(border-right, text, solid 3px);
+        background:url("./images/canvas_default.png") no-repeat;
+        background-size: cover;
         @media screen and (max-width: $md) {
             display: none;
         }
-        background-size: cover;
-        background: url("./images/cubism.png") no-repeat;
     }
     &__painting {
         width: 100%;

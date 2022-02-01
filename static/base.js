@@ -23,8 +23,10 @@ const toggleNavbar = () => {
 };
 
 (function(){
+    window.onresize = () => draw();
     document.addEventListener("DOMContentLoaded", function() {
         toggleThemedElements();
+
         window.fitText( document.getElementsByClassName("fit"), 0.6 );
         window.fitText( document.getElementsByClassName("job__title"), 2 );
         window.fitText( document.getElementsByClassName("job__details"), 2 );
@@ -34,6 +36,7 @@ const toggleNavbar = () => {
         window.fitText( document.getElementById("experience"), 0.5 );
         window.fitText( document.getElementById("mantra"), 2 );
         window.fitText( document.getElementById("case_studies"), 1 );
+        draw();
         /*
         AOS.init({
             duration: 800,
