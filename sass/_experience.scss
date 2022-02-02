@@ -9,7 +9,6 @@
         flex: 1;
         display:flex;
         align-items: center;
-        align-items: center;
         justify-content: center;
         @include theme(color, background);
         @include theme(background-color, text);
@@ -22,6 +21,9 @@
                 text-orientation: initial;
                 font-size: 3rem;
             }
+        }
+        @media screen and (max-width: $md) {
+            @include theme(border-bottom, background, solid 3px);
         }
     }
     &__jobs{

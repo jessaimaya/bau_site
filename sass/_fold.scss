@@ -5,6 +5,9 @@
     align-content: initial;
     justify-content: initial;
     @include theme(border-bottom, text, solid 5px);
+    @media screen and (max-width: $md) {
+        flex-direction: column;
+    }
     canvas {
         cursor: pointer;
         position: absolute;
@@ -21,7 +24,8 @@
         background:url("./images/canvas_default.png") no-repeat;
         background-size: cover;
         @media screen and (max-width: $md) {
-            display: none;
+            min-height: 10vh;
+            overflow: visible;
         }
     }
     &__painting {
@@ -87,6 +91,7 @@
         display: flex;
         width: 100%;
         margin: 0;
+        padding: 0;
         list-style: none;
         flex-direction: row;
         justify-content: space-around;
