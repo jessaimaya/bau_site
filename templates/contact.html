@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Contact</h1>
+  <section class="contact">
+    <div class="contact__info">
+      <h1>Jessaí Maya</h1>
+      <p>
+        I'm a digital artist with almost 10 years of experience mainly in front-end web development. In these years I've collaborated with many clients of a bunch of industries taking part as back-end and design areas.
+      </p>
+      <p>
+        I'm the kind of person who loves his job, even after work, I like to keep programming just for fun or read a programming related book and sketch some code.
+      </p>
+      <p>
+        I'm always willing to participate on new projects, so don´t hesitate to reach me on any of the following social networks or simple by mail.
+      </p>
+      <a class="btn red" href="./jessai-maya-resume.pdf" target="_blank">Download Resume</a>
+      <div class="contact__social">
+        {% include "social_links.html" %}
+      </div>
+    </div>
+    <div class="contact__picture">
+      <img src="images/me_news.jpg" alt="Jessaí Maya | Profile Picture">
+    </div>
+  </section>
 {% endblock %}

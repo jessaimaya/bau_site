@@ -1,0 +1,38 @@
+.contact {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  h1 {
+    font-weight: 100;
+    font-size: 4rem;
+    font-family: $bitter;
+    text-align: center;
+  }
+  & .btn {
+    margin-top: 1rem;
+  }
+  &__info {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+    p {
+      font-family: $lato;
+      @include theme(color, text);
+    }
+    @include theme(border, text, solid 3px);
+  }
+  &__picture {
+    flex: 1;
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
+  &__social {
+    margin-top: auto;
+  }
+}

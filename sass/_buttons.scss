@@ -1,0 +1,14 @@
+.btn {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: fit-content;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  @include theme(border, text, solid 2px);
+  @include theme(box-shadow, text, 3px 3px);
+  &.red {
+    @include theme(color, background);
+    @include theme(background-color, red);
+  }
+}
