@@ -3,11 +3,18 @@
   display: flex;
   flex-direction: row;
   align-content: center;
+  @media screen and (max-width: $md) {
+    flex-direction: column-reverse;
+  }
   h1 {
     font-weight: 100;
     font-size: 4rem;
     font-family: $bitter;
     text-align: center;
+    @media screen and (max-width: $md) {
+      margin: 1rem 0;
+      font-size: 3rem;
+    }
   }
   & .btn {
     margin-top: 1rem;
@@ -19,6 +26,11 @@
     justify-content: space-between;
     padding: 1rem;
     margin: 1rem;
+    @media screen and (max-width: $md) {
+      padding: 0 1rem;
+      margin: 0;
+      @include theme(border, text, transparent);
+    }
     p {
       font-family: $lato;
       @include theme(color, text);
@@ -34,5 +46,8 @@
   }
   &__social {
     margin-top: auto;
+    @media screen and (max-width: $md) {
+      margin-top: 2rem;
+    }
   }
 }
