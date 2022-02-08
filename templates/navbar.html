@@ -10,31 +10,31 @@
             Home
         </a>
     </li>
-  <!-- <li
-      class="navbar__link{% if current_path == "/case-studies/" %}-active{% endif %}"
-  >
-  <a
-      href="/case-studies"
-      title="Case Studies"
-      class="navbar__link"
-  >
-    Case Studies
-  </a>
-  </li>
-  
-  
-    <li
-        class="navbar__link{% if current_path == "/projects/" %}-active{% endif %}"
-    >
-        <a
-            href="/projects"
-            title="Projects"
-            class="navbar__link"
-        >
-            Projects
-        </a>
-    </li>
-    -->
+  <!--  <li
+       class="navbar__link{% if current_path  is containing("/studies/") %}-active{% endif %}"
+   >
+   <a
+       href="/studies"
+       title="Studies"
+       class="navbar__link"
+   >
+     Studies
+   </a>
+   </li>
+   
+   
+     <li
+         class="navbar__link{% if current_path == "/projects/" %}-active{% endif %}"
+     >
+         <a
+             href="/projects"
+             title="Projects"
+             class="navbar__link"
+         >
+             Projects
+         </a>
+     </li>
+     -->
     <li
         class="navbar__link{% if current_path == "/contact/" %}-active{% endif %}"
     >
@@ -57,7 +57,7 @@
         </li>
     </ul>
     <button class="navbar__menuicon" onclick="toggleNavbar()">
-        <img src="images/navbar_light.svg" alt="navbar icon" class="themed light" />
-        <img src="images/navbar_black.svg" alt="navbar icon" class="themed dark" />
+        <img src="/images/navbar_light.svg" alt="navbar icon" class="themed light" />
+        <img src="/images/navbar_black.svg" alt="navbar icon" class="themed dark" />
     </button>
 </ul>

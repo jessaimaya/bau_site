@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="case_studies">
+  <div class="case_studies__title" id="case_studies">
+    <h2>Studies</h2>
+  </div>
+  <div class="case_studies__container">
+    <ul class="case_studies__list">
+      {% set section = get_section(path="studies/_index.md") %}
+      {% for post in section.pages %}
+      <li class="study__item">
+        <h2 class="study__item-title">{{ post.title }}</h2>
+        <div class="study__item-body">
+          <p>{{post.description}}</p>
+        </div>
+        <div class="study__item-footer">
+          <a class="btn red" href="{{ post.permalink }}">Read</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

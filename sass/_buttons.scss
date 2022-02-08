@@ -7,8 +7,8 @@
   text-decoration: none;
   @include theme(border, text, solid 2px);
   @include theme(box-shadow, text, 3px 3px);
+  @include theme(color, white);
   &.red {
-    @include theme(color, background);
     @include theme(background-color, red);
   }
 }

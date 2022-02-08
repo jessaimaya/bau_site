@@ -1,0 +1,80 @@
+.case_studies{
+  display: flex;
+  flex-direction: row;
+  @include theme(border-bottom, text, solid 5px);
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+  }
+
+  &__title {
+    flex: 1;
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    @include theme(color, background);
+    @include theme(background-color, text);
+
+    h2 {
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      @media screen and (max-width: $md) {
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+        font-size: 3rem;
+      }
+    }
+  }
+  &__container{
+    flex: 3;
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+    flex-direction: column;
+  }
+  &__list {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @media screen and (max-width: $md) {
+      padding: 0;
+    }
+  }
+  .study__item {
+    width: 80%;
+    margin: 1rem auto;
+    @include theme(border, text, solid 2px);
+    @media screen and (max-width: $md) {
+      width: 95%;
+    }
+    h2 {
+      margin: 0;
+      padding: 1rem;
+      font-family: $bitter;
+      @include theme(border-bottom, text, solid 2px);
+      @include theme(color, background);
+      @include theme(background-color, text);
+    }
+    &-body {
+      padding: 1rem;
+    }
+    p {
+      font-family: $lato;
+      @include theme(color, text);
+    }
+    &-footer {
+      display: flex;
+      justify-content: end;
+    }
+    .btn {
+      margin: 0 2rem 1rem;
+    }
+  }
+}
+.study {
+
+}
