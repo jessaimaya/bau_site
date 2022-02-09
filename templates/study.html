@@ -25,13 +25,14 @@
   </div>
   {% endif %}
   <div class="study__title">
-    <h2>{{ page.title }}</h2>
+    <h1>{{ page.title }}</h1>
   </div>
   {% if page.extra.extract %}
   <div class="study__extract">
-    <h3>{{ page.extra.extract }}</h3>
+    <p>{{ page.extra.extract }}</p>
   </div>
   {% endif %}
+
   {{ page.content | safe }}
 </section>
 {% endblock %}
