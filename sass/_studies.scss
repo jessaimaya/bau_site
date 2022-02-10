@@ -123,8 +123,10 @@
   display: flex;
   width: 100%;
   flex-direction: row;
-
-  &-project {
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+  }
+    &-project {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -178,7 +180,14 @@
   }
   &-body {
     padding: 1rem;
-    font-family: $lato;
-    @include theme(color, text);
+    p {
+      font-family: $lato;
+      @include theme(color, text);
+    }
+  }
+}
+.glide__arrows {
+  @media screen and (max-width: $md) {
+    display: none;
   }
 }
