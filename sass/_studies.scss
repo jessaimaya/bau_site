@@ -76,5 +76,118 @@
   }
 }
 .study {
+  &__title {
+    h1 {
+      margin: 0;
+      padding: 1.5rem;
+      font-size: 3rem;
+      text-align: center;
+      @include theme(color, background);
 
+      @media screen and (max-width: $md) {
+        padding: 0.3rem;
+      }
+    }
+    margin-top: -1rem;
+    @include theme(background-color, text);
+  }
+  &__extract {
+    padding: 1rem 3rem;
+    &.bordered {
+      @include theme(border-top, text, solid 2px);
+      @include theme(border-bottom, text, solid 2px);
+    }
+    p {
+      font-size: 1.5rem;
+      font-family: $lato;
+      font-weight: 100;
+      text-align: center;
+      @include theme(color, text);
+    }
+    @media screen and (max-width: $md) {
+      padding: 1rem;
+    }
+  }
+}
+.glide {
+  max-width: 100%;
+  img {
+    max-width:100%;
+  }
+  &__slides {
+    margin: 0;
+  }
+}
+
+.project__summary {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+  }
+    &-project {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 1rem 0;
+      @include theme(background-color, text);
+      @include theme(color, background);
+    }
+    &:first-child {
+      @include theme(border-right, text, solid 2px);
+    }
+  }
+  &-list {
+    margin: 0;
+    padding: 0 1rem;
+    list-style: none;
+    margin-bottom: 1rem;
+    h4 {
+      font-weight: bold;
+      font-family: $lato;
+      @include theme(color, text);
+    }
+  }
+  &-item {
+    font-family: $lato;
+    @include theme(color, text);
+  }
+  &-details {
+    margin: 0;
+  }
+  li {
+    font-family: $lato;
+    @include theme(color, text);
+  }
+}
+.project__challenge {
+  h3 {
+    margin: 0;
+    padding: 1.5rem;
+    font-size: 3rem;
+    text-align: center;
+    @include theme(color, background);
+    @include theme(background-color, text);
+    @media screen and (max-width: $md) {
+      padding: 0.3rem;
+    }
+  }
+  &-body {
+    padding: 1rem;
+    p {
+      font-family: $lato;
+      @include theme(color, text);
+    }
+  }
+}
+.glide__arrows {
+  @media screen and (max-width: $md) {
+    display: none;
+  }
 }

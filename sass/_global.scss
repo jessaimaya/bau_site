@@ -25,3 +25,23 @@ main {
  ul {
      list-style: none;
  }
+ .bullets {
+     li:not(.no-bullet):before {
+         content: "\2022";
+         margin-right: 0.5rem;
+         @include theme(color, bullet);
+     }
+
+     li:not(.no-bullet):nth-child(2n + 1):before {
+         content: "\2022";
+         margin-right: 0.5rem;
+         @include theme(color, bullet);
+     }
+
+     li:not(.no-bullet):nth-child(4n -  1):before,
+     li:not(.no-bullet):nth-child(4n):before {
+         content: "\2022";
+         margin-right: 0.5rem;
+         @include theme(color, blue);
+     }
+ }
